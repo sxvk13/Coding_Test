@@ -1,6 +1,6 @@
-/*
+ï»¿/*
 *
-* ±¸¸§ Level Áø¹ý º¯È¯
+* êµ¬ë¦„ Level ì§„ë²• ë³€í™˜
 *
 */
 /*
@@ -19,36 +19,36 @@ int main() {
 	string iR = {};
 	int r = 0;
 
-	// Á¤¼ö
+	// ì •ìˆ˜
 	cin >> iNum;
-	// º¯È¯µÈ °á°ú
+	// ë³€í™˜ëœ ê²°ê³¼
 	cin >> iR;
 
-	//r(Áø¼ö)ÀÇ ¹üÀ§ : 2~16
+	//r(ì§„ìˆ˜)ì˜ ë²”ìœ„ : 2~16
 		for (int i = 2; i < 17; ++i) {
-		//°á°ú °è»ê
-		//Á¤¼ö¸¦ º¹»ç
+		//ê²°ê³¼ ê³„ì‚°
+		//ì •ìˆ˜ë¥¼ ë³µì‚¬
 		int iTemp = iNum;
 
-		//Áø¼ö¹üÀ§ ³» º¯È¯À» ÁøÇà
+		//ì§„ìˆ˜ë²”ìœ„ ë‚´ ë³€í™˜ì„ ì§„í–‰
 		while (iTemp > 0) {
-			//sprinf¸¦ ÅëÇØ ³ª¸ÓÁö¸¦ 16Áø¼ö ¹®ÀÚ·Î ÀúÀå
+			//sprinfë¥¼ í†µí•´ ë‚˜ë¨¸ì§€ë¥¼ 16ì§„ìˆ˜ ë¬¸ìžë¡œ ì €ìž¥
 			sprintf_s(chMod, "%X", iTemp % i);
-			//string °´Ã¼ÀÇ insertÇÔ¼ö¸¦ »ç¿ëÇÏ¿© 0¹øÂ° index (Á¦ÀÏ ¾Õ)¿¡ ÀúÀåµÈ ¹®ÀÚ¸¦ »ðÀÔ.
+			//string ê°ì²´ì˜ insertí•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ 0ë²ˆì§¸ index (ì œì¼ ì•ž)ì— ì €ìž¥ëœ ë¬¸ìžë¥¼ ì‚½ìž….
 			iMod.insert(0, chMod);
-			//³ª´©±â ÁøÇà
+			//ë‚˜ëˆ„ê¸° ì§„í–‰
 			iTemp /= i;
 		}
-		//string °´Ã¼ÀÇ compareÇÔ¼ö¸¦ »ç¿ëÇÏ¿© Áø¼öº¯È¯À» ÁøÇàÇÑ ¹®ÀÚ¿­°ú ÀÔ·Â¹ÞÀº º¯È¯µÈ °á°ú¸¦ ºñ±³
-		//compare ÇÔ¼ö´Â °°À¸¸é 0À» ¹ÝÈ¯
+		//string ê°ì²´ì˜ compareí•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ ì§„ìˆ˜ë³€í™˜ì„ ì§„í–‰í•œ ë¬¸ìžì—´ê³¼ ìž…ë ¥ë°›ì€ ë³€í™˜ëœ ê²°ê³¼ë¥¼ ë¹„êµ
+		//compare í•¨ìˆ˜ëŠ” ê°™ìœ¼ë©´ 0ì„ ë°˜í™˜
 		if (!iMod.compare(iR))
 		{
-			//°°À»°æ¿ì ÇØ´ç i°ª (Áø¼ö) °¡ rÀÌ¹Ç·Î ´õÀÌ»ó ºñ±³ÇÒ ÇÊ¿ä°¡ ¾øÀ½. µû¶ó¼­ ´ëÀÔ ÈÄ ¹Ýº¹¹® Á¾·á
+			//ê°™ì„ê²½ìš° í•´ë‹¹ iê°’ (ì§„ìˆ˜) ê°€ rì´ë¯€ë¡œ ë”ì´ìƒ ë¹„êµí•  í•„ìš”ê°€ ì—†ìŒ. ë”°ë¼ì„œ ëŒ€ìž… í›„ ë°˜ë³µë¬¸ ì¢…ë£Œ
 			r = i;
 			break;
 		}
 		else {
-			//°°Áö ¾ÊÀ» °æ¿ì ¹®ÀÚ¿­À» ºñ¿öÁÖ°í ¹Ýº¹¹® ÁøÇà.
+			//ê°™ì§€ ì•Šì„ ê²½ìš° ë¬¸ìžì—´ì„ ë¹„ì›Œì£¼ê³  ë°˜ë³µë¬¸ ì§„í–‰.
 			iMod.clear();
 		}
 	}
