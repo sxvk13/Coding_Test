@@ -23,9 +23,9 @@ using namespace std;
 typedef struct Classes {
 	
 	//과목별 학생수 , 등수, a+비율, 평가개수, 과락기준, 받은 점수
-	int nClassStudents=0, nGrade=0, nRate=0, nTest=0, nFail=0, *nScore=NULL;
+	int iClassStudents=0, iGrade=0, iRate=0, iTest=0, iFail=0, *iScore=NULL;
 	// a+ 기준 등수
-	int nResult = 0;
+	int iResult = 0;
 	bool bCheck = true;
 
 }T_Class;
@@ -35,47 +35,47 @@ typedef struct Classes {
 int main() {
 
 	//구름이가 듣는 수업의 개수 1~20개
-	int nClass;
-	cin >> nClass;
+	int iClass;
+	cin >> iClass;
 	
 	//수업 개수만큼 구조체 배열 동적할당.
-	T_Class *Class = new T_Class[nClass];
+	T_Class *Class = new T_Class[iClass];
 
 	for (int i = 0; i < nClass; ++i) {
-		cin >> Class[i].nClassStudents>> Class[i].nGrade >> Class[i].nRate >> Class[i].nTest >> Class[i].nFail;
+		cin >> Class[i].iClassStudents>> Class[i].iGrade >> Class[i].iRate >> Class[i].iTest >> Class[i].iFail;
 
 		// a+ 기준 백분위 -> a+ 기준 등수
-		Class[i].nResult = Class[i].nClassStudents * ((float)Class[i].nRate / 100);
+		Class[i].iResult = Class[i].iClassStudents * ((float)Class[i].iRate / 100);
 
 		// 계산된 a+ 기준 등수 Class->nResult 보다 높아야 a+
-		if (Class[i].nGrade >= Class[i].nResult) {
+		if (Class[i].iGrade >= Class[i].iResult) {
 			Class[i].bCheck = false;
 		}
 		
 		
 		//수행평가 점수 배열 동적할당
-		Class[i].nScore = new int[Class[i].nTest];
+		Class[i].iScore = new int[Class[i].iTest];
 
 		//수행평가 점수 입력
-		for (int j = 0; j < Class[i].nTest; ++j) {
-			cin >> Class[i].nScore[j];
-			if (Class[i].nScore[j] <= Class[i].nFail) {
+		for (int j = 0; j < Class[i].iTest; ++j) {
+			cin >> Class[i].iScore[j];
+			if (Class[i].iScore[j] <= Class[i].iFail) {
 				Class[i].bCheck = false;
 			}
 		}
 	}
-	for (int i = 0; i < nClass; ++i) {
+	for (int i = 0; i < iClass; ++i) {
 		if (!Class[i].bCheck) {
 			cout << 0;
 			break;
 		}
-		else if (i == nClass - 1 && Class[i].bCheck == true) {
+		else if (i == iClass - 1 && Class[i].bCheck == true) {
 			cout << 1;
 		}
 	}
 	//수업 구조체 배열 메모리 해제
-	for (int i = 0; i < nClass; ++i) {
-		delete[] Class[i].nScore;
+	for (int i = 0; i < iClass; ++i) {
+		delete[] Class[i].iScore;
 	}
 	delete[] Class;
 
