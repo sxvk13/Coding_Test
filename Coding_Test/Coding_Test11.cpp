@@ -2,7 +2,7 @@
 *
 *	Programmers Lv1 평균구하기
 */
-#include <iostream>
+/*#include <iostream>
 #include <string>
 #include <vector>
 
@@ -26,3 +26,4 @@ double solution(vector<int> arr) {
 
     return answer;
 }
+*/
