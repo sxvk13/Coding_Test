@@ -81,6 +81,9 @@
     <ClCompile Include="Coding_Test22.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Coding_Test23.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.editorconfig">
