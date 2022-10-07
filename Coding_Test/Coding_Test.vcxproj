@@ -163,6 +163,7 @@
     <ClCompile Include="Coding_Test28.cpp" />
     <ClCompile Include="Coding_Test29.cpp" />
     <ClCompile Include="Coding_Test3.cpp" />
+    <ClCompile Include="Coding_Test30.cpp" />
     <ClCompile Include="Coding_Test4.cpp" />
     <ClCompile Include="Coding_Test5.cpp" />
     <ClCompile Include="Coding_Test6.cpp" />
