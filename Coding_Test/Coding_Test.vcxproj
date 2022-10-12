@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Coding_Test.42.cpp" />
+    <ClCompile Include="Coding_Test42.cpp" />
     <ClCompile Include="Coding_Test.cpp" />
     <ClCompile Include="Coding_Test10.cpp" />
     <ClCompile Include="Coding_Test11.cpp" />
@@ -177,6 +177,7 @@
     <ClCompile Include="Coding_Test4.cpp" />
     <ClCompile Include="Coding_Test40.cpp" />
     <ClCompile Include="Coding_Test41.cpp" />
+    <ClCompile Include="Coding_Test43.cpp" />
     <ClCompile Include="Coding_Test5.cpp" />
     <ClCompile Include="Coding_Test6.cpp" />
     <ClCompile Include="Coding_Test7.cpp" />

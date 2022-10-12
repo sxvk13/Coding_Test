@@ -138,7 +138,10 @@
     <ClCompile Include="Coding_Test41.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Coding_Test.42.cpp">
+    <ClCompile Include="Coding_Test42.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Coding_Test43.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
